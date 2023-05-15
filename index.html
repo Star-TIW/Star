@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" type="image/x-icon" href="./star.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Star Prx</title>
+  <meta name="description" content="Nebula Gamez has a vast variety of proxies that can unblock just about anything!" />
+  <meta name="keywords" content="proxy, web proxy, ultraviolet, service workers, unblock websites, unblock chromebook, free web proxy, proxy list, proxy sites, un block chromebook, online proxy, proxy server, proxysite, proxy youtube, bypass securly, bypass iboss, bypass lightspeed filter, holy unblocker, chromebooks, titanium network, unblock youtube, youtube proxy, unblocked youtube, youtube unblocked">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#434c5e">
+  <meta name="googlebot" content="index, follow, snippet" />
+  <link href="index.css" rel="stylesheet">
+  <link href="stars.css" rel="stylesheet">
+  <script src="uv/uv.bundle.js" defer></script>
+  <script src="uv/uv.config.js" defer></script>
+  <script src="register-sw.js" defer></script>
+  <script src="search.js" defer></script>
+  <script src="index.js" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+          "@type": "Question",
+          "name": "What is Ultraviolet (Web Proxy)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers and more!"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I unblock sites using Ultraviolet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply head to an official site featuring Ultraviolet such as Holy Unblocker or Incognito! You can also self-host Ultraviolet on your own web server for maximum privacy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if Ultraviolet is blocked or not working?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Join the Titanium Network Discord at discord.gg/unblock!"
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <section class="wrapper">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="name"><span>STAR
+      </span>
+    </div>
+  </section>  <div class="nav-container">
+    <div class="nav-buttons">
+      <div class="settings"><button id="settings-toggle" class="nv-log" type="button"><i class="fa-solid fa-gears"></i></button></div>
+      <div id="settings">
+        <h2>Star</h2>
+        <p>Settings to change the appearance of Star!</p>
+        <br>
+        <h3>Tab Cloaker</h3>
+        <div class="cloaker">
+          <form>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" placeholder="Enter tab title">
+
+            <label for="icon">Website:</label>
+            <input type="icon" id="icon" name="icon" placeholder="Enter website URL">
+
+            <button class="button" type="button" onclick="cloak()">Cloak</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div title="Star Logo" class="logo-wrapper">
+    <img class="logo" src="./star.png" alt="" />
+    <h1 title="Can unblock Just about anything!!!">Star Proxy</h1>
+  </div>
+  <form id="uv-form" class="flex-center">
+    <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden" />
+    <input id="uv-address" type="text" placeholder="Enter URL" />
+  </form>
+  <div class="desc left-margin">
+    <p id="uv-error"></p>
+    <pre id="uv-error-code"></pre>
+  </div>
+  <footer>
+    <a title="The Official TIW/STAR Github" href="https://github.com/Nebula-Gamez">Star</a>
+    <a title="The Official TIW/Kwazy Github" href="https://github.com/KwazyMotoo">TIW | Kwazy</a>
+    <a title="My games website" href="https://simply-bettr.vercel.app">My website</a>
+
+    <a title="For privacy implications related to Ultraviolet." href="https://github.com/titaniumnetwork-dev/Ultraviolet/raw/main/LICENSE" style="margin-left: auto">License</a>
+    <span title="Hope you like!">Star/TIW &copy; Star/TIW 2023</span>
+  </footer>
+</body>
+<script>
+  function cloak() {
+    var title = document.getElementById("title").value;
+    var website = document.getElementById("icon").value;
+    if (!title || !icon) {
+      alert("Please fill out all fields before cloaking.");
+      return;
+    }
+    document.querySelector("form").reset();
+    var newWindow = window.open('about:blank');
+    newWindow.document.title = title;
+    var iconUrl = 'https://www.google.com/s2/favicons?sz=32&domain=' + website;
+    var linkTag = document.createElement('link');
+    linkTag.setAttribute('rel', 'icon');
+    linkTag.setAttribute('type', 'image/x-icon');
+    linkTag.setAttribute('href', iconUrl);
+    newWindow.document.head.appendChild(linkTag);
+    var iframe = document.createElement('iframe');
+    iframe.src = "/";
+    iframe.style.position = 'absolute';
+    iframe.style.top = '0';
+    iframe.style.left = '0';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.border = 'none';
+    iframe.style.margin = '0';
+    iframe.style.padding = '0';
+    newWindow.document.body.appendChild(iframe);
+  }
+
+  function preset1() {
+    document.getElementById("title").value = "Classes";
+    document.getElementById("icon").value = "https://ssl.gstatic.com/classroom/ic_product_classroom_32.png";
+  }
+
+  function preset2() {
+    document.getElementById("title").value = "Dashboard";
+    document.getElementById("icon").value = "https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico";
+  }
+
+  function preset3() {
+    document.getElementById("title").value = "Infinite Campus";
+    document.getElementById("icon").value = "https://campus.tvusd.k12.ca.us/campus/nav-wrapper/favicon.ico";
+  }
+
+  function preset4() {
+    document.getElementById("title").value = "Clever | Portal";
+    document.getElementById("icon").value = "https://assets.clever.com/launchpad/d0a3cd891/favicon.ico?1";
+  }
+
+  function preset5() {
+    document.getElementById("title").value = "Desmos Classroom Activities";
+    document.getElementById("icon").value = "https://uploads.desmos.com/fingerprinted/static/classroom-assets/img/student/favicon-450881478525dad90cee9f937b93639c4042aedf-a.ico";
+  }
+
+  function preset6() {
+    document.getElementById("title").value = "Google Docs";
+    document.getElementById("icon").value = "https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico";
+  }
+
+  function preset7() {
+    document.getElementById("title").value = "DeltaMath";
+    document.getElementById("icon").value = "https://www.deltamath.com/app/images/flav3.png";
+  }
+
+  function preset8() {
+    document.getElementById("title").value = "Google";
+    document.getElementById("icon").value = "https://google.com/favicon.ico";
+  }
+
+  function preset9() {
+    document.getElementById("title").value = "- Grammarly";
+    document.getElementById("icon").value = "https://denali-static.grammarly.com/files/524adc79be04712e3a336059c2959e2e/favicon.ico";
+  }
+
+  function preset10() {
+    document.getElementById("title").value = "Reading To Do, i-Ready";
+    document.getElementById("icon").value = "https://login.i-ready.com/favicon.ico";
+  }
+  const settingsToggle = document.getElementById('settings-toggle');
+  const settings = document.getElementById('settings');
+  settingsToggle.addEventListener('click', () => {
+    settings.classList.toggle('show');
+  });
+</script>
+
+</html>
