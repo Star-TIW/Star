@@ -103,32 +103,33 @@
   function cloak() {
     var title = document.getElementById("title").value;
     var website = document.getElementById("icon").value;
-    if (!title || !icon) {
+    if (!title || !website) {
       alert("Please fill out all fields before cloaking.");
       return;
     }
     document.querySelector("form").reset();
-    var newWindow = window.open('about:blank');
+    var newWindow = window.open("about:blank");
     newWindow.document.title = title;
-    var iconUrl = 'https://www.google.com/s2/favicons?sz=32&domain=' + website;
-    var linkTag = document.createElement('link');
-    linkTag.setAttribute('rel', 'icon');
-    linkTag.setAttribute('type', 'image/x-icon');
-    linkTag.setAttribute('href', iconUrl);
+    var iconUrl = "https://www.google.com/s2/favicons?sz=32&domain=" + website;
+    var linkTag = document.createElement("link");
+    linkTag.setAttribute("rel", "icon");
+    linkTag.setAttribute("type", "image/x-icon");
+    linkTag.setAttribute("href", iconUrl);
     newWindow.document.head.appendChild(linkTag);
-    var iframe = document.createElement('iframe');
-    iframe.src = "/";
-    iframe.style.position = 'absolute';
-    iframe.style.top = '0';
-    iframe.style.left = '0';
-    iframe.style.width = '100%';
-    iframe.style.height = '100%';
-    iframe.style.border = 'none';
-    iframe.style.margin = '0';
-    iframe.style.padding = '0';
+    var iframe = newWindow.document.createElement("iframe");
+    var originalUrl = window.location.href;
+    var newUrl = originalUrl + "/index.html";
+    iframe.src = newUrl;
+    iframe.style.position = "absolute";
+    iframe.style.top = "0";
+    iframe.style.left = "0";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+    iframe.style.margin = "0";
+    iframe.style.padding = "0";
     newWindow.document.body.appendChild(iframe);
   }
-
   function preset1() {
     document.getElementById("title").value = "Classes";
     document.getElementById("icon").value = "https://ssl.gstatic.com/classroom/ic_product_classroom_32.png";
