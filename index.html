@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <title>Star Prx</title>
-  <meta name="description" content="Nebula Gamez has a vast variety of proxies that can unblock just about anything!" />
+  <meta name="description" content="Star has a vast variety of proxies that can unblock just about anything!" />
   <meta name="keywords" content="proxy, web proxy, ultraviolet, service workers, unblock websites, unblock chromebook, free web proxy, proxy list, proxy sites, un block chromebook, online proxy, proxy server, proxysite, proxy youtube, bypass securly, bypass iboss, bypass lightspeed filter, holy unblocker, chromebooks, titanium network, unblock youtube, youtube proxy, unblocked youtube, youtube unblocked">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#434c5e">
   <meta name="googlebot" content="index, follow, snippet" />
@@ -59,14 +59,19 @@
     <div id="name"><span>STAR
       </span>
     </div>
-  </section>  <div class="nav-container">
+  </section>
+    <div class="nav-container">
     <div class="nav-buttons">
       <div class="settings"><button id="settings-toggle" class="nv-log" type="button"><i class="fa-solid fa-gears"></i></button></div>
       <div id="settings">
-        <h2>Star</h2>
-        <p>Settings to change the appearance of Star!</p>
-        <br>
-        <h3>Tab Cloaker</h3>
+          <div class="credits">
+            <h3>Credits</h3>
+    <a href="https://github.com/Nebula-Gamez">• Star</a>
+    <a href="https://github.com/KwazyMotoo">• TIW | Kwazy</a>
+    <a href="https://simply-bettr.vercel.app">• Games</a>
+    <a href="https://github.com/titaniumnetwork-dev/Ultraviolet/raw/main/LICENSE">• License</a>
+          </div>
+          <h3>Tab Cloaker</h3>
         <div class="cloaker">
           <form>
             <label for="title">Title:</label>
@@ -82,7 +87,7 @@
     </div>
   </div>
   <div title="Star Logo" class="logo-wrapper">
-    <img class="logo" src="./star.png" alt="" />
+    <img class="logo" src="/star.png" alt="" />
     <h1 title="Can unblock Just about anything!!!">Star Proxy</h1>
   </div>
   <form id="uv-form" class="flex-center">
@@ -93,14 +98,6 @@
     <p id="uv-error"></p>
     <pre id="uv-error-code"></pre>
   </div>
-  <footer>
-    <a title="The Official TIW/STAR Github" href="https://github.com/Nebula-Gamez">Star</a>
-    <a title="The Official TIW/Kwazy Github" href="https://github.com/KwazyMotoo">TIW | Kwazy</a>
-    <a title="My games website" href="https://simply-bettr.vercel.app">My website</a>
-
-    <a title="For privacy implications related to Ultraviolet." href="https://github.com/titaniumnetwork-dev/Ultraviolet/raw/main/LICENSE" style="margin-left: auto">License</a>
-    <span title="Hope you like!">Star/TIW &copy; Star/TIW 2023</span>
-  </footer>
 </body>
 <script>
   function cloak() {
@@ -120,7 +117,7 @@
     linkTag.setAttribute('href', iconUrl);
     newWindow.document.head.appendChild(linkTag);
     var iframe = document.createElement('iframe');
-    iframe.src = "https://star-prx.vercel.app/index.html";
+    iframe.src = "/";
     iframe.style.position = 'absolute';
     iframe.style.top = '0';
     iframe.style.left = '0';
