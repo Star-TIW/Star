@@ -100,7 +100,7 @@ const particleOptions = {
     // Configure particle.js options for 'shapes' option
     // Example configuration: particles.js shape configuration
     particles: {
-    number: { value: 1250, density: { enable: true, value_area: 800 } },
+    number: { value: 100, density: { enable: true, value_area: 800 } },
     color: { value: "#ffffff" },
     shape: {
       type: "circle",
