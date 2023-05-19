@@ -27,7 +27,6 @@ html {
   animation: fadeInAnimation ease-in-out 1.2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  cursor: crosshair;
 }
 #shapes, #stars, #bubbles, #snow {
   position: absolute;
