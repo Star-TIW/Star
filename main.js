@@ -100,7 +100,7 @@ const particleOptions = {
     // Configure particle.js options for 'shapes' option
     // Example configuration: particles.js shape configuration
     particles: {
-    number: { value: 1255, density: { enable: true, value_area: 800 } },
+    number: { value: 125, density: { enable: true, value_area: 800 } },
     color: { value: "#ffffff" },
     shape: {
       type: "circle",
@@ -147,7 +147,7 @@ const particleOptions = {
       grab: { distance: 400, line_linked: { opacity: 1 } },
       bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
       repulse: { distance: 200, duration: 0.4 },
-      push: { particles_nb: 4 },
+      push: { particles_nb: 400 },
       remove: { particles_nb: 2 }
     }
   },
