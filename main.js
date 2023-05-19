@@ -127,7 +127,7 @@ const particleOptions = {
     },
     move: {
       enable: true,
-      speed: 600,
+      speed: 6,
       direction: "none",
       random: false,
       straight: false,
