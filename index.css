@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
-@import url("https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -16,22 +16,23 @@ html {
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-}
-body {
+  margin: 0;
+  padding: 0;
   background: linear-gradient(
     178deg,
     rgba(23, 23, 23, 1) 0%,
     rgba(13, 13, 13, 1) 99%
   );
   flex-direction: column;
-  min-height: 100vh;
   animation: fadeInAnimation ease-in-out 1.2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-
-.fa-magnifying-glass {
-  color: black;
+#shapes, #stars, #bubbles, #snow {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
 
 .logo-wrapper {
@@ -39,11 +40,11 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 10%;
 }
 
 .logo {
   width: 200px;
+  margin-top: 10%;
 }
 
 .logo-wrapper .text {
@@ -149,9 +150,6 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-.wrapper {
-  z-index: 0;
-}
 #name {
   position: absolute;
   top: 10%;
@@ -209,9 +207,9 @@ body {
     rgba(30, 32, 31, 1) 100%
   );
 }
+
 #settings {
   position: absolute;
-  top: 0;
   left: -300px;
   width: 235px;
   height: 100vh;
@@ -220,9 +218,14 @@ body {
   padding: 20px;
   box-sizing: border-box;
   color: #fff;
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif, cursive;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  top: 0;
 }
+
+
 #settings p {
   margin-bottom: 20px;
 }
@@ -258,7 +261,7 @@ body {
   width: 175px;
   margin: 10% auto;
   max-width: 500px;
-  padding: 10px;
+  padding: 5px;
   position: relative;
   animation: zoom-in 0.5s ease-in-out forwards;
   font-family: cursive;
@@ -285,7 +288,6 @@ body {
   }
 }
 
-/* Styles for the submit button */
 .button {
   display: block;
   cursor: pointer;
@@ -316,7 +318,6 @@ body {
 .button:focus {
   outline: none;
 }
-/* Styles for the preset container */
 .preset-container {
   max-width: 400px;
   margin: 0 auto;
@@ -362,4 +363,115 @@ body {
 }
 #reset-btn {
   z-index: 2;
+}
+.more {
+  display: block;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: cursive;
+  font-size: 20px;
+  width: 100%;
+  height: 45px;
+  position: relative;
+  border: solid #000 2px;
+  color: #000;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  border-radius: 50px;
+  background-color: rgb(185, 185, 185);
+}
+.more:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(180, 132, 65, 1) 0%,
+    rgba(239, 239, 136, 1) 50%,
+    rgba(186, 138, 79, 1) 100%
+  );
+}
+#more-settings {
+  position: absolute;
+  top: 400px;
+  left: -300px;
+  width: 235px;
+  height: 100vh;
+  background-color: #1a1d25;
+  transition: all 1.5s ease;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: Arial, sans-serif, cursive;
+  z-index: 0;
+}
+
+
+#more-settings p {
+  margin-bottom: 20px;
+}
+
+#more-settings ul {
+  list-style: none;
+  padding: 0;
+}
+
+#more-settings li {
+  margin-bottom: 10px;
+}
+
+#more-settings.show {
+  left: 235px;
+}
+.close {
+  display: flex;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: cursive;
+  font-size: 20px;
+  width: auto;
+  height: auto;
+  border: solid #000 2px;
+  color: #000;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(185, 185, 185);
+  position: absolute;
+  top: 15px;
+  left: 10px;
+}
+.close:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(180, 132, 65, 1) 0%,
+    rgba(239, 239, 136, 1) 50%,
+    rgba(186, 138, 79, 1) 100%
+  );
+}
+.particle-settings {
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  height: 175px;
+  width: 0;
+}
+
+#particles {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  font-family: inherit;
+  border-radius: 50px;
+  box-shadow: 0 0 0 0px, 0 0 0 2px rgba(180, 132, 65, 1),
+    0 0 0 4px rgba(239, 239, 136, 1), 0 0 0 6px rgba(186, 138, 79, 1);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+.visibility {
+  display: none;
 }
