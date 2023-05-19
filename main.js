@@ -139,8 +139,8 @@ const particleOptions = {
   interactivity: {
     detect_on: "canvas",
     events: {
-      onhover: { enable: true, mode: "grab" },
-      onclick: { enable: true, mode: "push" },
+      onhover: { enable: true, mode: "remve" },
+      onclick: { enable: true, mode: "bubble" },
       resize: true
     },
     modes: {
