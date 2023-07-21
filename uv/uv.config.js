@@ -1,6 +1,6 @@
 self.__uv$config = {
-    prefix: '/star/service/',
-    bare: 'https://0ziuro-6969.csb.app/',
+    prefix: '/star/active/',
+    bare: 'https://tiw.tiwweb.workers.dev/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv/uv.handler.js',
