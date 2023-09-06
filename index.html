@@ -140,62 +140,75 @@
     <pre id="uv-error-code"></pre>
   </div>
   <script>
+    // Function to check the selected option and initialize particles
     function checkSelectedOption() {
       const selectedOption = dropdown.value;
       initializeParticles(selectedOption);
     }
+    // Check selected option on page load
     window.onload = checkSelectedOption;
     document.addEventListener("DOMContentLoaded", function() {
       var selector = document.getElementById("particles");
+      // Retrieve the saved value from local storage
       var savedValue = localStorage.getItem("particleChoice");
+      // Set the selected option based on the saved value
       if (savedValue) {
         selector.value = savedValue;
       }
+      // Add event listener to save the selection when it changes
       selector.addEventListener("change", function() {
         var selectedValue = selector.value;
+        // Save the selected value to local storage
         localStorage.setItem("particleChoice", selectedValue);
       });
     });
+    // Retrieve the saved value from local storage when the page is loaded
     window.addEventListener("load", function() {
       var selector = document.getElementById("particles");
+      // Retrieve the saved value from local storage
       var savedValue = localStorage.getItem("particleChoice");
+      // Set the selected option based on the saved value
       if (savedValue) {
         selector.value = savedValue;
       }
     });
   </script>
   <script>
+    let questionAsked = false;
+
     function askToCloak() {
-      const userResponse = confirm('Would you like to cloak this tab as something else?');
-      if (userResponse) {
-        const tabTitle = prompt('What would you like the title to be of this tab to be?');
-        const urlToCloak = prompt('What website would you like to cloak this as? (e.g., discord.com)');
-        if (tabTitle && urlToCloak) {
-          const cloakedURL = `https://www.google.com/s2/favicons?sz=32&domain=${urlToCloak}`;
-          const newTab = window.open('about:blank', '_blank');
-          newTab.document.title = tabTitle;
-          const favicon = document.createElement('link');
-          favicon.rel = 'icon';
-          favicon.href = cloakedURL;
-          newTab.document.head.appendChild(favicon);
-          const iframe = document.createElement('iframe');
-          newTab.document.body.appendChild(iframe);
-          var originalUrl = window.location.href;
-          var newUrl = originalUrl + "/";
-          iframe.src = newUrl;
-          iframe.style.position = "absolute";
-          iframe.style.top = "0";
-          iframe.style.left = "0";
-          iframe.style.width = "100%";
-          iframe.style.height = "100%";
-          iframe.style.border = "none";
-          iframe.style.margin = "0";
-          iframe.style.padding = "0";
-          window.location.href = 'chrome://newtab'
+      if (!questionAsked) {
+        const userResponse = confirm('Would you like to cloak this tab as something else?');
+        if (userResponse) {
+          const tabTitle = prompt('What would you like the title to be of this tab?');
+          const urlToCloak = prompt('What website would you like to cloak this as? (e.g., discord.com)');
+          if (tabTitle && urlToCloak) {
+            const cloakedURL = `https://www.google.com/s2/favicons?sz=32&domain=${urlToCloak}`;
+            const newTab = window.open('about:blank', '_blank');
+            newTab.document.title = tabTitle;
+            const favicon = document.createElement('link');
+            favicon.rel = 'icon';
+            favicon.href = cloakedURL;
+            newTab.document.head.appendChild(favicon);
+            const iframe = document.createElement('iframe');
+            newTab.document.body.appendChild(iframe);
+            var originalUrl = window.location.href;
+            var newUrl = originalUrl + "/";
+            iframe.src = newUrl;
+            iframe.style.position = "absolute";
+            iframe.style.top = "0";
+            iframe.style.left = "0";
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.border = "none";
+            iframe.style.margin = "0";
+            iframe.style.padding = "0";
+            window.location.href = 'chrome://newtab';
+            questionAsked = true;
+          }
         }
       }
     };
-      
     window.onload = askToCloak;
   </script>
   <!-- Google tag (gtag.js) -->
