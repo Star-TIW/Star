@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/star/',
-    bare: 'https://join.tomahawkchurch.org/bare/',
+    bare: 'https://phantomnetwork.cloud/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv/uv.handler.js',
