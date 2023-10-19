@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/star/',
-    bare: 'https://fireworks.sprk.lol/bare/',
+    bare: 'https://banking.norushcharge.com/outerspace/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv/uv.handler.js',
