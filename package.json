@@ -1,0 +1,25 @@
+{
+  "name": "star-prx",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A static proxy service that uses ultraviolet and can unblock just about anything",
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Star-TIW",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@titaniumnetwork-dev/ultraviolet": "^1.0.10",
+    "@tomphttp/bare-server-node": "^1.2.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Star-TIW/Star.git"
+  }
+}
