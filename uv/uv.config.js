@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/star/',
-    bare: 'https://bettr.vercel.app/outerspace/',
+    bare: 'https://bettr-frfr.vercel.app/outerspace/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv/uv.handler.js',
