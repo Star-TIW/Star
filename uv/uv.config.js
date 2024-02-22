@@ -1,6 +1,6 @@
 self.__uv$config = {
-    prefix: '/star/',
-    bare: 'https://shadowedu.aybit.ch/bare/',
+    prefix: "/star/",
+    bare: "https://mathworksheets.starscene.com/bare/",
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv/uv.handler.js',
