@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: "/star/",
-    bare: "https://chaotic-guest-bestie.glacialpower.com/bare/",
+    bare: "https://55gms.com/t/",
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv/uv.handler.js',
