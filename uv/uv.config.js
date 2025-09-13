@@ -1,10 +1,10 @@
 self.__uv$config = {
-    prefix: "/star/",
+    prefix: "./star/",
     bare: "https://55gms.com/t/",
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
-    handler: '/uv/uv.handler.js',
-    bundle: '/uv/uv.bundle.js',
-    config: '/uv/uv.config.js',
-    sw: '/uv/uv.sw.js',
+    handler: './uv/uv.handler.js',
+    bundle: './uv/uv.bundle.js',
+    config: './uv/uv.config.js',
+    sw: './uv/uv.sw.js',
 };
