@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: "/star/",
-    bare: "https://55gms.com/t/",
+    bare: "https://copy-interstellar.vercel.app/ca/",
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv/uv.handler.js',
