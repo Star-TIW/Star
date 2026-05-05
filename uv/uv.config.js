@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: "/star/",
-    bare: "https://copy-interstellar.vercel.app/bare/",
+    bare: "https://nextlogic.prs7.org/bare/",
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv/uv.handler.js',
